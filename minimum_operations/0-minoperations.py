@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Project minOperations"""
 
 def countProcess(number):
     """ Return list of process until n H """
