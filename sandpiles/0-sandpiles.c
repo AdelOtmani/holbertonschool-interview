@@ -74,12 +74,12 @@ void sum_grids(int grid1[3][3], int grid2[3][3])
 }
 
 /**
- * check_grid - function that iterates over sandpiles
+ * topp_grid - function that iterates over sandpiles
  * @grid1: first sandpile.
  * @grid2: second sandpile.
  * Return: no return.
  */
-void check_grid(int grid1[3][3], int grid2[3][3])
+void topp_grid(int grid1[3][3], int grid2[3][3])
 {
 	int i;
 	int j;
@@ -119,6 +119,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	while (!check_is_stable(grid1, grid2))
 	{
 		print_sandpile(grid1);
-		check_grid(grid1, grid2);
+		topp_grid(grid1, grid2);
 	}
 }
