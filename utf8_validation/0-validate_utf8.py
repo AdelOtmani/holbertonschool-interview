@@ -3,18 +3,19 @@
 
 
 def validUTF8(data):
-    """ method that determines if a given data set represents a valid UTF-8 encoding"""
+    """ method that determines if a given data
+    set represents a valid UTF-8 encoding"""
 
     numberofbytes = 0
     b1 = 1 << 7
     b2 = 1 << 6
 
     for d in data:
-        m = 1 << 7
+        b = 1 << 7
         if numberofbytes == 0:
-            while m & d:
+            while b & d:
                 numberofbytes += 1
-                m = m >> 1
+                b = b >> 1
             if numberofbytes == 0:
                 continue
             if numberofbytes == 1 or numberofbytes > 4:
