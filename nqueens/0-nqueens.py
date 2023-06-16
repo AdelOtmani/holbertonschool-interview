@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 import sys
 
-if len(sys.argv) > 2 or len(sys.argv) < 2:
+
+if len(sys.argv) != 2:
     print("Usage: nqueens N")
-    sys.exit(1)
+    exit(1)
 
 N = sys.argv[1]
 
@@ -12,50 +13,34 @@ try:
 
 except:
     print("N must be a number")
-    sys.exit(1)
+    exit(1)
 
 if int(sys.argv[1]) < 4:
     print("N must be at least 4")
-    sys.exit(1)
+    exit(1)
 
 
-list = []
+def nqueens(N, i=0, a=[], b=[], c=[]):
+    """ all possible positions for queen """
+    if i < N:
+        for j in range(N):
+            if (j not in a) and (i + j not in b) and (i - j not in c):
+                yield from nqueens(N, i + 1, a + [j], b + [i + j], c + [i - j])
+    else:
+        yield a
 
-#chessboard
-#NxN matrix with all elements 0
-board = [[0]*N for _ in range(N)]
 
-def is_attack(i, j):
-    #checking if there is a queen in row or column
-    for k in range(0,N):
-        if board[i][k]==1 or board[k][j]==1:
-            return True
-    #checking diagonals
-    for k in range(0,N):
-        for l in range(0,N):
-            if (k+l==i+j) or (k-l==i-j):
-                if board[k][l]==1:
-                    return True
-    return False
+def result(n):
+    """ print all solution """
+    list = []
+    i = 0
+    for res in nqueens(N, 0):
+        for r in res:
+            list.append([i, r])
+            i += 1
+        print(list)
+        list = []
+        i = 0
 
-def N_queen(n):
-    #if n is 0, solution found
-    if n==0:
-        return True
-    for i in range(0,N):
-        for j in range(0,N):
-            if (not(is_attack(i,j))) and (board[i][j]!=1):
-                board[i][j] = 1
 
-                #recursion
-                #wether we can put the next queen with this arrangment or not
-                if N_queen(n-1)==True:
-                    list.append([i,j])
-                    return True
-                board[i][j] = 0
-
-    return False
-
-N_queen(N)
-list.reverse()
-print(list)
+result(N)
