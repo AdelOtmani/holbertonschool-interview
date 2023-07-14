@@ -8,12 +8,12 @@ request(url, async function (error, response, body) {
   } else {
     const characters =JSON.parse(body).characters;
     for (const actor in characters) {
-      const res = await new Promise ((resolve, reject) => {
+      const res = await new Promise((resolve, reject) => {
         request(characters[actor], (error, res, html) => {
           if (error) {
             reject(error);
             } else {
-              resolve (JSON.parse(html).name)
+              resolve(JSON.parse(html).name)
             }
           });
         });
