@@ -62,7 +62,7 @@ void heap_sort(int *array, size_t size)
 		{
 			swap(&array[0], &array[i]);
 			print_array(array, size);
-			heapify(array, i, size, 0);
+			heap(array, i, size, 0);
 		}
 		Swap(&array[0], &array[i]);
 		heap(array, i, size, 0);
