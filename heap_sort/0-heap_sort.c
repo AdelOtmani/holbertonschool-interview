@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
 * Swap - Function that swaps two integers
 * @a: first integer
@@ -23,6 +24,7 @@ void swap(int *a, int *b)
 * @i: index
 * Return: void
 */
+
 void heap(int *array, int n, size_t size, int i)
 {
 	int largest = i;
