@@ -5,6 +5,7 @@
  * @array: pointer to the first element of the array to search in
  * @size: number element in array
  * @value: is value for search
+ * Return: return the first index or -1 if is none
  */
 int advanced_binary(int *array, size_t size, int value)
 {
