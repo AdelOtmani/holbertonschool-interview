@@ -16,8 +16,7 @@ void radix_sort(int *array, size_t size)
 	for (j = 0; j < size; j++)
 	{
 		if (num < array[j])
-			num = array[j];
-    }
+			num = array[j];	}
 	while (num / 10 > 0)
 	{ num = num / 10;
 		count++; }
@@ -48,14 +47,8 @@ void radix_sort(int *array, size_t size)
 				{
 					if (array[j] / 100 == a)
 					{ narray[c] = array[j];
-						c++;
-                    }
-                }
-            }
-        }
+						c++; } } } }
 		for (i = 0; i < size ; i++)
 			array[i] = narray[i];
-		print_array(narray, size);
-        }
-	free(narray);
-}
+		print_array(narray, size); }
+	free(narray); }
