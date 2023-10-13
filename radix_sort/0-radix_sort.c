@@ -32,17 +32,13 @@ void radix_sort(int *array, size_t size)
 					if (array[j] % 10 == a)
 					{
 						narray[c] = array[j];
-						c++;
-                    }
-                }
+						c++; } }
 				if (b == 1)
 				{
 					if (array[j] / 10 == a)
 					{
 						narray[c] = array[j];
-						c++;
-                    }
-                }
+						c++; } }
 				if (b == 2)
 				{
 					if (array[j] / 100 == a)
