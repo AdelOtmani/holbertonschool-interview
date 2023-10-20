@@ -3,6 +3,7 @@
 island perimeter module
 """
 
+
 def island_perimeter(grid):
     """
     grid is a list of list of integers:
@@ -19,7 +20,7 @@ def island_perimeter(grid):
     height = len(grid)
     lenght = len(grid[0])
 
-    for i in range(0,height):
+    for i in range(0, height):
         for j in range(0, lenght):
             """if the current cell is land"""
             if grid[i][j] == 1:
