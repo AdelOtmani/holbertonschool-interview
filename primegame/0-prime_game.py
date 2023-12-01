@@ -15,7 +15,7 @@ def isWinner(x, nums):
 
     N = max(nums)
     round = [True for _ in range(max(N + 1, 2))]
-    for i  in range(2, int(N // 2)+ 1):
+    for i in range(2, int(N // 2) + 1):
         if not round[i]:
             continue
         for j in range(i * i, N + 1, i):
