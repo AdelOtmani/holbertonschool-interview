@@ -11,17 +11,17 @@ heap_t *find_parent_node(heap_t **root, int value);
  */
 heap_t *heap_insert(heap_t **root, int value)
 {
-	binary_tree_t *new;
+	binary_tree_t *node;
 	binary_tree_t *parent;
 
 	parent = find_parent_node(root, value);
 
-	new = binary_tree_node(parent, value);
+	node = binary_tree_node(parent, value);
 
 	if (parent == NULL)
 	{
-		*root = new;
-		return (new);
+		*root = node;
+		return (node);
 	}
 	return (NULL);
 }
