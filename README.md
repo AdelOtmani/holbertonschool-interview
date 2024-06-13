@@ -4,3 +4,4 @@
 3) heap insert
 4) minimum_operations
 5) sandpiles
+6) linked_list_palindrome
