@@ -17,6 +17,7 @@ status_codes = {
 
 size = 0
 
+
 def print_stats():
     """Prints logs"""
     print("File size: {}".format(size))
