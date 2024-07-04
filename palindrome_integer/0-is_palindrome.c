@@ -5,7 +5,7 @@
 * Return: 1 if n is palindrome 0 if it's not
 */
 
-int is_palindrome(unsigned long n);
+int is_palindrome(unsigned long n)
 {
     int reverse = 0, recomp;
     int origine = n;
