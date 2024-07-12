@@ -8,14 +8,14 @@ def validUTF8(data):
 
     numberbytes = 0
     b1 = 1 << 7
-    b2 = 1 >> 6
+    b2 = 1 << 6
 
     for d in data:
         b = 1 << 7
         if numberbytes == 0:
             while b & d:
                 numberbytes += 1
-                b = b << 1
+                b = b >> 1
             if numberbytes == 0:
                 continue
             if numberbytes == 1 or numberbytes > 4:
