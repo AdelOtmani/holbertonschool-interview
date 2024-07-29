@@ -1,5 +1,5 @@
 # directory Nqueens by A.OTMANI
-## Write a function that checks whether or not a given unsigned integer is a palindrome.
+## The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
 1) function, def nqueens():
     Usage: nqueens N
         If the user called the program with the wrong number of arguments, print Usage: nqueens N, followed by a new line, and exit with the status 1
