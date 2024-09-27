@@ -13,3 +13,4 @@
 12) heap_sort
 13) advanced_binary_search
 14) count_it
+15) heap_extract
