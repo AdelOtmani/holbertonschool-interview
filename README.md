@@ -14,3 +14,4 @@
 13) advanced_binary_search
 14) count_it
 15) heap_extract
+16) infinite_multiplication
